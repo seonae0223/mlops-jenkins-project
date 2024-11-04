@@ -1,3 +1,5 @@
+name: jenkins-pipeline
+
 services:
   web:
     build: .
