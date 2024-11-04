@@ -38,7 +38,7 @@ pipeline {
 			steps {
 				withCredentials([[$class: 'UsernamePasswordMultiBinding',
 				credentialsId: 'seonae0223', 
-				usernameVariable: 'seonae0223', 
+				usernameVariable: 'admin_user', 
 				passwordVariable: '2166da60b4764305944a8543ea468c90'
 				]]) {
 					// 태그 붙이기. 태그를 붙일 때는 jenkins-pipeline_web:latest 태그를 붙여준다.
