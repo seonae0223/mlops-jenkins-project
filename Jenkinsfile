@@ -43,12 +43,13 @@ pipeline {
 				]]) {
 					// 태그 붙이기. 태그를 붙일 때는 jenkins-pipeline_web:latest 태그를 붙여준다.
 					sh "docker tag jenkins-pipeline_web:latest ${DOCKER_USER_ID}/jenkins-app:${BUILD_NUMBER}"
-					
+					echo "Done1"
 					// 로그인
 					sh "docker login -u ${DOCKER_USER_ID} -p ${DOCKER_USER_PASSWORD}"
-					
+					echo "Done2"
 					// Push
 					sh "docker push ${DOCKER_USER_ID}/jenkins-app:${BUILD_NUMBER}"
+					echo "Done3"
 				}
 			}
 		}
