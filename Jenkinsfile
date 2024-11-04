@@ -38,8 +38,8 @@ pipeline {
 			steps {
 				withCredentials([[$class: 'UsernamePasswordMultiBinding',
 				credentialsId: 'docker-hub', 
-				usernameVariable: 'DOCKER_USER_ID', 
-				passwordVariable: 'DOCKER_USER_PASSWORD'
+				usernameVariable: 'seonae0223', 
+				passwordVariable: 'psa#261200'
 				]]) {
 					// 태그 붙이기. 태그를 붙일 때는 jenkins-pipeline_web:latest 태그를 붙여준다.
 					sh "docker tag jenkins-pipeline_web:latest ${DOCKER_USER_ID}/jenkins-app:${BUILD_NUMBER}"
